@@ -55,6 +55,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  font-family: "Roboto";  
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -111,10 +112,6 @@ h5 {
   --clr-neutral-200: #263238;
 }
 
-body {
-  font-family: "Roboto";
-  line-height: 1.5;
-}
 
 /* Utility */
 
