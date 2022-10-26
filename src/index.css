@@ -107,6 +107,7 @@ h5 {
   --clr-primary: #ef5350;
 
   --clr-accent-100: #0074eced;
+  --clr-accent-200: #fffd6aed;
 
   --clr-neutral-100: #fbfbfb;
   --clr-neutral-200: #263238;
@@ -131,6 +132,23 @@ h5 {
   margin-left: var(--flow-horizontal-gap, 1rem);
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-beetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .text-center {
   text-align: center;
 }
@@ -141,6 +159,10 @@ h5 {
 
 .text-accent-100 {
   color: var(--clr-accent-100);
+}
+
+.text-accent-200 {
+  color: var(--clr-accent-200);
 }
 
 .text-neutral-100 {
@@ -159,6 +181,10 @@ h5 {
   background-color: var(--clr-accent-100);
 }
 
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+
 .bg-neutral-100 {
   background-color: var(--clr-neutral-100);
 }
@@ -173,4 +199,8 @@ h5 {
 
 .fw-semi-bold {
   font-weight: bold;
+}
+
+.pointer {
+  cursor: pointer;
 }

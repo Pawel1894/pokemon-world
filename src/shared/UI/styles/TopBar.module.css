@@ -1,0 +1,11 @@
+.container {  
+  padding-inline: 1rem;  
+  width: 100%;
+  max-width: 100rem;
+}
+
+.logo {
+  width: 2.5rem;
+  height: auto;  
+}
+
