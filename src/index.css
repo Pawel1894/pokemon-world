@@ -42,6 +42,10 @@ dd {
   margin: 0;
 }
 
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
@@ -108,7 +112,8 @@ h5 {
 
   --clr-accent-100: #0074eced;
   --clr-accent-200: #fffd6aed;
-
+  --clr-accent-300: #fffd6a8f;
+  
   --clr-neutral-100: #fbfbfb;
   --clr-neutral-200: #263238;
 }
@@ -147,6 +152,14 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.ff-poke-black {
+  font-family: "PokeDark"
+}
+
+.ff-poke-light {
+  font-family: "PokeLight"  
 }
 
 .text-center {

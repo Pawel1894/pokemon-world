@@ -1,7 +1,14 @@
+.top-bar {
+  border-bottom: 2px solid var(--clr-accent-100);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 .container {  
   padding-inline: 1rem;  
   width: 100%;
-  max-width: 100rem;
+  max-width: 100rem;  
 }
 
 .logo {

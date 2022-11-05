@@ -5,7 +5,7 @@ import styles from "../styles/TopBar.module.css";
 
 export default function TopBar() {
   return (
-    <header className={`flex-center-center bg-primary`}>
+    <header className={`${styles["top-bar"]} flex-center-center bg-primary`}>
       <div className={`${styles["container"]}  flex-center-beetween`}>
         <Logo />
         <div className={`flex-center flow-horizontal`}>
