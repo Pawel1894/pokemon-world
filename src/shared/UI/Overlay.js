@@ -7,7 +7,7 @@ export default function Overlay() {
   return (
     <>
       <TopBar />
-      <main>
+      <main className="flex">
         <SideBar />
         <Outlet />
       </main>

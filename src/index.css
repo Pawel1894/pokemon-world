@@ -110,7 +110,7 @@ h5 {
 :root {
   --clr-primary: #ef5350;
 
-  --clr-accent-100: #0074eced;
+  --clr-accent-100: #0072ec;
   --clr-accent-200: #fffd6aed;
   --clr-accent-300: #fffd6a8f;
   
@@ -135,6 +135,10 @@ h5 {
 
 .flow-horizontal > * + * {
   margin-left: var(--flow-horizontal-gap, 1rem);
+}
+
+.flex {
+  display: flex;
 }
 
 .flex-center {

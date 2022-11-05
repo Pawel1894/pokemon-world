@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/components.module.css";
+import styles from "./styles/IconButton.module.css";
 export default function IconButton({ css, onClick, disabled, children }) {
   let styleClass = "";
 

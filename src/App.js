@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
 import Overlay from "./shared/UI/Overlay";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Overlay />}>
-            <Route path="/" />
+            <Route path="/" element={<Home />} />
           </Route>
         </Routes>
       </BrowserRouter>
