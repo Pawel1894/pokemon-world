@@ -5,9 +5,9 @@
   position: sticky;  
   gap: 1rem;
   left: 0;
-  top: 42px;
-  width: 80px;
-  height: calc(100vh - 42px);
+  top: 2.625rem;
+  width: 5rem;
+  height: calc(100vh - 2.5rem);
   padding-block: 1rem;
   padding-inline: 0.5rem;
   box-shadow: 1px 0 5px 0  var(--clr-accent-100);  
@@ -17,7 +17,7 @@
 
 .aside-open.aside-container {
   align-items: flex-start;
-  width: 180px;
+  width: 11.25rem;
   transition: width 0.5s;
 }
 
@@ -25,8 +25,8 @@
   border-radius: 100%;
   padding: 0.5rem;
   text-decoration: none;
-  width: 55px;
-  height: 55px;
+  width: 3.438rem;
+  height: 3.438rem;
   background-color: var(--clr-accent-300);   
 }
 

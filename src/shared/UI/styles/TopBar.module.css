@@ -1,5 +1,4 @@
-.top-bar {
-  border-bottom: 2px solid var(--clr-accent-100);
+.top-bar {  
   position: sticky;
   top: 0;
   z-index: 2;

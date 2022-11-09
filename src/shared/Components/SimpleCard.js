@@ -8,9 +8,11 @@ export default function SimpleCard({ image, title, details }) {
         <img className={`${styles["img"]}`} src={image} alt="" />
         <h2 className={`${styles["title"]}`}>{title}</h2>
       </div>
-      <div className={`${styles["details"]}`}>
-        <p>{details}</p>
-      </div>
+      {details ? (
+        <div className={`${styles["details"]}`}>
+          <p>{details}</p>
+        </div>
+      ) : null}
     </div>
   );
 }
