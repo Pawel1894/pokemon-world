@@ -5,7 +5,7 @@ import logo from "../../../assets/logo.png";
 
 export default function Logo() {
   return (
-    <Link to={"/"}>
+    <Link to={"/home"}>
       <img className={`${styles["logo"]}`} src={logo} alt="" />
     </Link>
   );

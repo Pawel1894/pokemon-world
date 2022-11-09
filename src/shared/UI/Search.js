@@ -1,5 +1,5 @@
 import React from "react";
-import IconButton from "../Components/IconButton";
+import IconButton from "../components/IconButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Search.module.css";

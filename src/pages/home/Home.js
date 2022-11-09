@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleCard from "../../shared/Components/SimpleCard";
+import SimpleCard from "../../shared/components/SimpleCard";
 import pikachu from "../../assets/pikachu.png";
 import fist from "../../assets/fist.png";
 import incubator from "../../assets/incubator.png";
@@ -9,13 +9,16 @@ import smartphone from "../../assets/smartphone.png";
 import superpotion from "../../assets/superpotion.png";
 import map from "../../assets/map.png";
 import { Link } from "react-router-dom";
-import styles from "./Home.module.css";
+import styles from "./styles/Home.module.css";
 
 export default function Home() {
   return (
     <section className={`${styles["home"]}`}>
       <div className={`${styles["cards"]}`}>
-        <Link className={`${styles["card"]} text-decoration-none`} to={"/"}>
+        <Link
+          className={`${styles["card"]} text-decoration-none`}
+          to={"/pokemon"}
+        >
           <SimpleCard image={pikachu} title={"Pokemons"} />
         </Link>
         <Link className={`${styles["card"]} text-decoration-none`} to={"/"}>

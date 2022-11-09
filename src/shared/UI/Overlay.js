@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import SideBar from "./SideBar/SideBar";
-import TopBar from "./TopBar/TopBar";
+import SideBar from "./sideBar/SideBar";
+import TopBar from "./topBar/TopBar";
 
 export default function Overlay() {
   return (

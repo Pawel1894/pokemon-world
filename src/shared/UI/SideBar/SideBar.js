@@ -16,7 +16,7 @@ export default function SideBar() {
       onMouseLeave={() => setIsMenuOpen(false)}
     >
       <NavLink
-        to={"/"}
+        to={"/home"}
         title="Homepage"
         className={({ isActive }) => {
           return `${styles["nav-link"]} ${
