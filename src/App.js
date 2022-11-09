@@ -1,13 +1,17 @@
 import React, { Suspense } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Overlay from "./shared/ui/Overlay";
+
+// Create a client
+const queryClient = new QueryClient();
 
 const Pokemon = React.lazy(() => import("./pages/pokemon/Pokemon"));
 
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
           <Route element={<Overlay />}>
@@ -24,7 +28,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </QueryClientProvider>
   );
 }
 
