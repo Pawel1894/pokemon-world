@@ -13,7 +13,8 @@ import styles from "./styles/Home.module.css";
 
 export default function Home() {
   return (
-    <section className={`${styles["home"]}`}>
+    <section className="container align-self-center">
+      <h1 className={`${styles["title"]}`}>Welcome, to poke world!</h1>
       <div className={`${styles["cards"]}`}>
         <Link
           className={`${styles["card"]} text-decoration-none`}

@@ -115,18 +115,43 @@ h5 {
   --clr-accent-300: #fffd6a8f;
   
   --clr-neutral-100: #fbfbfb;
-  --clr-neutral-200: #263238;
+  --clr-neutral-200: #263238;  
+
+  --type-normal: #A8A878;
+  --type-fire: #F08030;
+  --type-water: #6890F0;
+  --type-grass: #78C850;
+  --type-electric: #F8D030;
+  --type-ice: #98D8D8;
+  --type-fighting: #C03028;
+  --type-poison: #A040A0;
+  --type-ground: #E0C068;
+  --type-flying: #A890F0;
+  --type-psychic: #F85888;
+  --type-bug: #A8B820;
+  --type-rock: #B8A038;
+  --type-ghost: #705898;
+  --type-dark: #705848;
+  --type-dragon: #7038F8;
+  --type-steel: #B8B8D0;
+  --type-fairy: #F0B6BC;
+
 }
 
 
 /* Utility */
 
 .container {
-  --max-width: 90rem;
-  --inline-padding: 1rem;
+  margin-block: 1rem;
+  margin-inline: auto;  
+  max-width: calc(100% - 80px);  
+  margin-left: 5rem;
+  height: calc(100vh - 72px);
+  width: 100%;
+}
 
-  margin-inline: auto;
-  width: min(var(--max-width), 100% - (var(--inline-padding) * 2));
+.align-self-center {
+  align-self: center;
 }
 
 .flow > * + * {
@@ -135,6 +160,10 @@ h5 {
 
 .flow-horizontal > * + * {
   margin-left: var(--flow-horizontal-gap, 1rem);
+}
+
+.padding-2 {
+  padding: 2rem;
 }
 
 .flex {
@@ -194,6 +223,14 @@ h5 {
   color: var(--clr-neutral-200);
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 .bg-primary {
   background-color: var(--clr-primary);
 }
@@ -212,6 +249,61 @@ h5 {
 
 .bg-neutral-200 {
   background-color: var(--clr-neutral-200);
+}
+
+.bg-type-normal {
+  background-color: var(--type-normal);
+}
+.bg-type-fire {
+  background-color: var(--type-fire);
+}
+.bg-type-water {
+  background-color: var(--type-water);
+}
+.bg-type-grass {
+  background-color: var(--type-grass);
+}
+.bg-type-electric {
+  background-color: var(--type-electric);
+}
+.bg-type-ice {
+  background-color: var(--type-ice);
+}
+.bg-type-fighting {
+  background-color: var(--type-fighting);
+}
+.bg-type-poison {
+  background-color: var(--type-poison);
+}
+.bg-type-ground {
+  background-color: var(--type-ground);
+}
+.bg-type-flying {
+  background-color: var(--type-flying);
+}
+.bg-type-psychic {
+  background-color: var(--type-psychic);
+}
+.bg-type-bug {
+  background-color: var(--type-bug);
+}
+.bg-type-rock {
+  background-color: var(--type-rock);
+}
+.bg-type-ghost {
+  background-color: var(--type-ghost);
+}
+.bg-type-dark {
+  background-color: var(--type-dark);
+}
+.bg-type-dragon {
+  background-color: var(--type-dragon);
+}
+.bg-type-steel {
+  background-color: var(--type-steel);
+}
+.bg-type-fairy {
+  background-color: var(--type-fairy);
 }
 
 .fw-bold {
