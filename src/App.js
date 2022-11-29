@@ -5,6 +5,7 @@ import Overlay from "./shared/ui/Overlay";
 import Spinner from "./shared/ui/Spinner";
 
 const Pokemon = React.lazy(() => import("./pages/pokemon/Pokemon"));
+const PokemonDetail = React.lazy(() => import("./pages/pokemon/PokemonDetail"));
 
 function App() {
   return (
@@ -18,6 +19,14 @@ function App() {
             element={
               <Suspense fallback={<Spinner center={true} />}>
                 <Pokemon />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/pokemon/:id"
+            element={
+              <Suspense fallback={<Spinner center={true} />}>
+                <PokemonDetail />
               </Suspense>
             }
           />

@@ -166,8 +166,16 @@ h5 {
   padding: 2rem;
 }
 
+.padding-inline-2 {
+  padding-inline: 2rem;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-center {
@@ -185,6 +193,10 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.gap {  
+  gap: var(--gap-size, 1rem);
 }
 
 .ff-poke-black {

@@ -12,9 +12,7 @@ import PokemonPlaceholder from "./PokemonPlaceholder";
 import styles from "./styles/Pokemon.module.css";
 
 export default function Pokemon() {
-  const [endpoint, setEndpoint] = useState(
-    "https://pokeapi.co/api/v2/pokemon?offset=0&limit=10"
-  );
+  const [endpoint, setEndpoint] = useState("https://pokeapi.co/api/v2/pokemon?offset=0&limit=10");
   const [pokemonSearch, setPokemonSearch] = useState();
   const [searchValue, setSearchValue] = useState(null);
   const pokemonQuery = usePokemon(searchValue);
@@ -30,18 +28,14 @@ export default function Pokemon() {
 
   if (status === "loading") return <Spinner center={true} />;
 
-  if (status === "error")
-    return toast.error("Error fetching pokemons... " + error);
+  if (status === "error") return toast.error("Error fetching pokemons... " + error);
 
   return (
     <div className="container">
       <div className={`${styles["controls"]}`}>
         <div className="flow">
           <div className="flow-horizontal">
-            <label
-              className={`${styles["controls-label"]}`}
-              htmlFor="randomPokemon"
-            >
+            <label className={`${styles["controls-label"]}`} htmlFor="randomPokemon">
               Get Random Pokemon:
             </label>
             <Random
@@ -64,26 +58,13 @@ export default function Pokemon() {
             />
           </div>
         </div>
-        <div
-          style={{ position: "relative" }}
-          className={styles["controls-pokemon"]}
-        >
+        <div style={{ position: "relative" }} className={styles["controls-pokemon"]}>
           {searchValue != null ? (
-            <Link
-              className="text-decoration-none"
-              to={`/pokemon/${pokemonQuery.data?.name}`}
-            >
-              <PokemonCard
-                status={pokemonQuery.status}
-                error={pokemonQuery.error}
-                pokemon={pokemonQuery.data}
-              />
+            <Link className="text-decoration-none" to={`/pokemon/${pokemonQuery.data?.name}`}>
+              <PokemonCard status={pokemonQuery.status} error={pokemonQuery.error} pokemon={pokemonQuery.data} />
             </Link>
           ) : (
-            <PokemonPlaceholder
-              status={pokemonQuery.status}
-              error={pokemonQuery.error}
-            />
+            <PokemonPlaceholder status={pokemonQuery.status} error={pokemonQuery.error} />
           )}
         </div>
       </div>

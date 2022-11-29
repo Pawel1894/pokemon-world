@@ -1,0 +1,29 @@
+.title {
+  font-size: 2.5rem;
+  font-family: "PokeLight";  
+  padding-bottom: 0.5rem;
+  
+  border-bottom: 0.1rem solid var(--clr-neutral-200);  
+}
+
+.sprite {
+  background-color: rgba(245, 245, 245, 0.589);
+  border-radius: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.7rem;
+}
+
+.ability-container {  
+  background-color: rgba(245, 245, 245, 0.589);
+  border-radius: 0.75rem;
+  padding:1rem;
+  max-width: 40ch;
+}
+
+.ability-title {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
