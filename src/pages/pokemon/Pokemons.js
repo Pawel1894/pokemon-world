@@ -8,10 +8,11 @@ import Input from "../../shared/ui/Input";
 import Spinner from "../../shared/ui/Spinner";
 import Random from "../../shared/ui/topBar/Random";
 import PokemonCard from "./PokemonCard";
+import PokemonList from "./PokemonList";
 import PokemonPlaceholder from "./PokemonPlaceholder";
 import styles from "./styles/Pokemon.module.css";
 
-export default function Pokemon() {
+export default function Pokemons() {
   const [endpoint, setEndpoint] = useState("https://pokeapi.co/api/v2/pokemon?offset=0&limit=10");
   const [pokemonSearch, setPokemonSearch] = useState();
   const [searchValue, setSearchValue] = useState(null);
@@ -31,7 +32,7 @@ export default function Pokemon() {
   if (status === "error") return toast.error("Error fetching pokemons... " + error);
 
   return (
-    <div className="container">
+    <section className="container">
       <div className={`${styles["controls"]}`}>
         <div className="flow">
           <div className="flow-horizontal">
@@ -68,36 +69,7 @@ export default function Pokemon() {
           )}
         </div>
       </div>
-      <div className={`${styles["pokemon-container"]}`}>
-        {data.results.map((pokemon, i) => {
-          return (
-            <Link key={i} to={`/pokemon/${pokemon.name}`}>
-              <PokemonCard pokemon={pokemon} />
-            </Link>
-          );
-        })}
-      </div>
-      <div className={`${styles["buttons"]} flow-horizontal`}>
-        <Button
-          text={"Previous Page"}
-          type="accent"
-          width={"150px"}
-          disabled={data.previous ? false : true}
-          onClickHandler={() => {
-            setEndpoint(data.previous);
-          }}
-        />
-
-        <Button
-          text={"Next Page"}
-          type="accent"
-          width={"150px"}
-          disabled={data.next ? false : true}
-          onClickHandler={() => {
-            setEndpoint(data.next);
-          }}
-        />
-      </div>
-    </div>
+      <PokemonList data={data} setEndpoint={setEndpoint} />
+    </section>
   );
 }

@@ -7,17 +7,6 @@
   margin-bottom: 4rem;
 }
 
-.cards {
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(auto-fit, 300px);
-  justify-content: center;
-  align-content: center;
-  margin-inline: auto;
-  width: 100%;  
-  max-width: 60rem;
-}
-
 .cards .card {
   transition: opacity 0.5s ease-in,
               scale 0.5s ease-in;

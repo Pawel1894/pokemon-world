@@ -17,7 +17,7 @@ export default function PokemonDetail() {
   if (status === "error") return toast.error("Error fetching pokemons... " + error);
 
   return (
-    <div className="container flow padding-inline-2" style={{ "--flow-gap": "2.5rem" }}>
+    <section className="container flow padding-inline-2" style={{ "--flow-gap": "2.5rem" }}>
       <h1 className={`${styles["title"]} text-capitalize fw-bold`}>{data.name}</h1>
       <Sprites sprites={data.sprites} />
       <div>
@@ -36,6 +36,6 @@ export default function PokemonDetail() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

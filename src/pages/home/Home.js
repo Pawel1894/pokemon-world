@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <section className="container align-self-center">
       <h1 className={`${styles["title"]}`}>Welcome, to poke world!</h1>
-      <div className={`${styles["cards"]}`}>
+      <div className={`grid-content-container`}>
         <Link className={`${styles["card"]} text-decoration-none`} to={"/pokemon"}>
           <SimpleCard image={pikachu} title={"Pokemons"} />
         </Link>
-        <Link className={`${styles["card"]} text-decoration-none`} to={"/"}>
+        <Link className={`${styles["card"]} text-decoration-none`} to={"/game"}>
           <SimpleCard image={player} title={"Games"} />
         </Link>
         <Link className={`${styles["card"]} text-decoration-none`} to={"/"}>

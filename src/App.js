@@ -4,8 +4,10 @@ import Home from "./pages/home/Home";
 import Overlay from "./shared/ui/Overlay";
 import Spinner from "./shared/ui/Spinner";
 
-const Pokemon = React.lazy(() => import("./pages/pokemon/Pokemon"));
+const Pokemons = React.lazy(() => import("./pages/pokemon/Pokemons"));
 const PokemonDetail = React.lazy(() => import("./pages/pokemon/PokemonDetail"));
+const Games = React.lazy(() => import("./pages/game/Games"));
+const Game = React.lazy(() => import("./pages/game/Game"));
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
             path="/pokemon"
             element={
               <Suspense fallback={<Spinner center={true} />}>
-                <Pokemon />
+                <Pokemons />
               </Suspense>
             }
           />
@@ -27,6 +29,22 @@ function App() {
             element={
               <Suspense fallback={<Spinner center={true} />}>
                 <PokemonDetail />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/game"
+            element={
+              <Suspense fallback={<Spinner center={true} />}>
+                <Games />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/game/:id"
+            element={
+              <Suspense fallback={<Spinner center={true} />}>
+                <Game />
               </Suspense>
             }
           />
