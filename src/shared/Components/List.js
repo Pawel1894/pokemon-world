@@ -1,21 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../../shared/ui/Button";
-import PokemonCard from "./PokemonCard";
-import styles from "./styles/Pokemon.module.css";
+import Button from "../../shared/components/Button";
+import styles from "./styles/List.module.css";
 
-export default function PokemonList({ data, setEndpoint }) {
+export default function List({ data, setEndpoint, children }) {
   return (
     <>
-      <div className={`${styles["pokemon-container"]}`}>
-        {data.results.map((pokemon, i) => {
-          return (
-            <Link key={i} to={`/pokemon/${pokemon.name}`}>
-              <PokemonCard pokemon={pokemon} />
-            </Link>
-          );
-        })}
-      </div>
+      <div className={`${styles["items-container"]}`}>{children}</div>
       <div className={`${styles["buttons"]} flow-horizontal`}>
         <Button
           text={"Previous Page"}

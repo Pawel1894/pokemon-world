@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { usePokemon } from "../../hooks/usePokemon";
 import { usePokemons } from "../../hooks/usePokemons";
-import Button from "../../shared/ui/Button";
-import Input from "../../shared/ui/Input";
+import List from "../../shared/components/List";
+import Input from "../../shared/components/Input";
 import Spinner from "../../shared/ui/Spinner";
 import Random from "../../shared/ui/topBar/Random";
 import PokemonCard from "./PokemonCard";
-import PokemonList from "./PokemonList";
 import PokemonPlaceholder from "./PokemonPlaceholder";
 import styles from "./styles/Pokemon.module.css";
 
@@ -69,7 +68,15 @@ export default function Pokemons() {
           )}
         </div>
       </div>
-      <PokemonList data={data} setEndpoint={setEndpoint} />
+      <List data={data} setEndpoint={setEndpoint}>
+        {data.results.map((pokemon, i) => {
+          return (
+            <Link key={i} to={`/pokemon/${pokemon.name}`}>
+              <PokemonCard pokemon={pokemon} />
+            </Link>
+          );
+        })}
+      </List>
     </section>
   );
 }

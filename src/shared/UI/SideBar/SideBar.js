@@ -4,6 +4,7 @@ import styles from "../styles/SideBar.module.css";
 import pikachu from "../../../assets/pikachu.png";
 import logo from "../../../assets/logo.png";
 import player from "../../../assets/player.png";
+import item from "../../../assets/superpotion.png";
 
 export default function SideBar() {
   const [isMenuOpen, setIsMenuOpen] = useState();
@@ -43,6 +44,16 @@ export default function SideBar() {
       >
         <img width={40} src={player} alt="" />
         <span>Games</span>
+      </NavLink>
+      <NavLink
+        to={"/item"}
+        title="Items"
+        className={({ isActive }) => {
+          return `${styles["nav-link"]} ${isActive ? styles["nav-link-active"] : null}`;
+        }}
+      >
+        <img width={40} src={item} alt="" />
+        <span>Items</span>
       </NavLink>
     </aside>
   );

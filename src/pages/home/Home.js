@@ -17,7 +17,7 @@ export default function Home() {
         <Link className={`${styles["card"]} text-decoration-none`} to={"/game"}>
           <SimpleCard image={player} title={"Games"} />
         </Link>
-        <Link className={`${styles["card"]} text-decoration-none`} to={"/"}>
+        <Link className={`${styles["card"]} text-decoration-none`} to={"/item"}>
           <SimpleCard image={superpotion} title={"Items"} />
         </Link>
       </div>

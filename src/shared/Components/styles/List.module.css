@@ -1,0 +1,16 @@
+.items-container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  width: 100%;
+  max-width:120rem;
+  gap: 1rem;
+  margin-top: 3rem;
+  }
+  
+  .buttons {
+    margin-inline:auto;
+    width: max-content;
+    margin-top: 1.5rem;
+  }

@@ -11,7 +11,9 @@ export default function Game({ data }) {
       <div className={`${styles["body"]}`}>
         <ul className={`text-left`}>
           {data.version_groups.map((version) => (
-            <li className={`${styles["version"]} text-accent-100`}>{version.name}</li>
+            <li key={version.name} className={`${styles["version"]} text-accent-100`}>
+              {version.name}
+            </li>
           ))}
         </ul>
       </div>

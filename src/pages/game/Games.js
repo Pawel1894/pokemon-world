@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useGenerations } from "../../hooks/useGeneration";
 import Spinner from "../../shared/ui/Spinner";

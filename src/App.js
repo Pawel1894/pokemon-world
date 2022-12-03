@@ -7,7 +7,7 @@ import Spinner from "./shared/ui/Spinner";
 const Pokemons = React.lazy(() => import("./pages/pokemon/Pokemons"));
 const PokemonDetail = React.lazy(() => import("./pages/pokemon/PokemonDetail"));
 const Games = React.lazy(() => import("./pages/game/Games"));
-const Game = React.lazy(() => import("./pages/game/Game"));
+const Items = React.lazy(() => import("./pages/item/Items"));
 
 function App() {
   return (
@@ -41,10 +41,10 @@ function App() {
             }
           />
           <Route
-            path="/game/:id"
+            path="/item"
             element={
               <Suspense fallback={<Spinner center={true} />}>
-                <Game />
+                <Items />
               </Suspense>
             }
           />

@@ -1,13 +1,7 @@
 import React from "react";
 import styles from "./styles/Button.module.css";
 
-export default function Button({
-  text,
-  type,
-  width,
-  disabled,
-  onClickHandler,
-}) {
+export default function Button({ text, type, width, disabled, onClickHandler }) {
   let css;
 
   if (type === "primary") css = `button-${type}`;
