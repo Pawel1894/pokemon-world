@@ -24,7 +24,7 @@ export function usePokemon(searchValue) {
   return useQuery({
     queryKey: ["pokemons", searchValue],
     queryFn: async () => {
-      if (typeof searchValue === "number") return await fetchByOffset(searchValue);
+      if (typeof searchValue === "number") return fetchByOffset(searchValue);
 
       return fetchByName(searchValue);
     },

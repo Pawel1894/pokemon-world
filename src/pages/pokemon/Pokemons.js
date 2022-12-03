@@ -57,7 +57,7 @@ export default function Pokemons() {
           </div>
         </div>
         <div style={{ position: "relative" }} className={styles["controls-pokemon"]}>
-          {searchValue !== null ? (
+          {searchValue ? (
             <Link className="text-decoration-none w-100" to={`/pokemon/${pokemonQuery.data?.name}`}>
               <PokemonCard status={pokemonQuery.status} error={pokemonQuery.error} pokemon={pokemonQuery.data} />
             </Link>

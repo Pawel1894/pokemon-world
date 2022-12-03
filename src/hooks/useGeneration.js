@@ -17,7 +17,7 @@ export function useGenerations() {
         result.push(fetchGenerationDetails(gen.url));
       }
 
-      return await Promise.all(result);
+      return Promise.all(result);
     },
   });
 }
