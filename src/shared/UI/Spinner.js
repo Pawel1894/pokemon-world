@@ -11,7 +11,7 @@ export default function Spinner({ size, color, center }) {
           borderTopColor: color ? color : "var(--clr-accent-100)",
         }}
         className={`${styles["loading"]}`}
-      ></div>
+      />
     </div>
   );
 }
