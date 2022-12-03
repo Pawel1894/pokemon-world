@@ -1,6 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
+async function fetchPokemonDetails(url) {
+  const { data } = await axios.get(url);
+  return data;
+}
+
 export function usePokemons(endpoint) {
   return useQuery({
     queryKey: ["pokemons", endpoint],
@@ -22,9 +27,4 @@ export function usePokemons(endpoint) {
     },
     keepPreviousData: true,
   });
-}
-
-async function fetchPokemonDetails(url) {
-  const { data } = await axios.get(url);
-  return data;
 }

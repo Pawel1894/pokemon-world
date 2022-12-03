@@ -23,7 +23,7 @@ export function usePokemon(searchValue) {
 
   return useQuery({
     queryKey: ["pokemons", searchValue],
-    queryFn: async () => {
+    queryFn: () => {
       if (typeof searchValue === "number") return fetchByOffset(searchValue);
 
       return fetchByName(searchValue);
