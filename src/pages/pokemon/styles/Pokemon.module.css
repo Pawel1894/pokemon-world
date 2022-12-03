@@ -13,7 +13,7 @@
 }
 
 .controls-pokemon {
-  width: max-content;
+  width: 18.75rem;
   margin-left: auto;
 }
 
@@ -22,8 +22,7 @@
 }
 
 .pokemon-card {
-  text-align: center;
-  width: 18.75rem;
+  text-align: center;  
   height: 12.25rem;
   padding: 1rem;  
   border: 2px solid var(--border-color);
@@ -51,3 +50,20 @@
   font-size: 0.8rem;  
 }
 
+@media(max-width: 868px) {
+  .controls {
+    flex-direction: column;
+    width: max-content;
+    align-items: center;    
+  }
+  
+  .controls-pokemon {    
+    margin-left: unset;    
+    width: 100%;
+  }
+  
+  .controls-label {    
+    text-align: left;
+  }
+
+}

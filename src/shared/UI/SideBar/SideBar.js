@@ -9,11 +9,23 @@ import item from "../../../assets/superpotion.png";
 export default function SideBar() {
   const [isMenuOpen, setIsMenuOpen] = useState();
 
+  function onMouseEnterHandler() {
+    if (window.innerWidth <= 768) return;
+
+    setIsMenuOpen(true);
+  }
+
+  function onMouseLeaveHandler() {
+    if (window.innerWidth <= 768) return;
+
+    setIsMenuOpen(false);
+  }
+
   return (
     <aside
       className={`${isMenuOpen ? styles["aside-open"] : null} ${styles["aside-container"]} bg-primary`}
-      onMouseEnter={() => setIsMenuOpen(true)}
-      onMouseLeave={() => setIsMenuOpen(false)}
+      onMouseEnter={onMouseEnterHandler}
+      onMouseLeave={onMouseLeaveHandler}
     >
       <NavLink
         to={"/home"}

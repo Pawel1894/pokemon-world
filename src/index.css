@@ -150,8 +150,7 @@ h5 {
 }
 
 .container {
-  margin-block: 1rem;
-  margin-inline: auto;  
+  margin-block: 1rem;  
   max-width: calc(100% - 80px);  
   margin-left: 5rem;
   min-height: calc(100vh -83px);
@@ -168,6 +167,21 @@ h5 {
   width: 100%;  
   height: 100%;
   max-width: var(--max-width, 60rem);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin-inline: auto;
+    padding-bottom: 8rem;
+  }
+  
+  .grid-content-container {
+    gap: 0.5rem;
+    --default-width: 100%;
+    padding-inline: 1rem;
+  }
 }
 
 .align-self-center {

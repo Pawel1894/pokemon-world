@@ -27,3 +27,14 @@
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
+
+.sprites {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+}
+
+@media (max-width: 768px) {
+  .sprites {
+    grid-template-columns: 100px 100px;        
+  }
+}

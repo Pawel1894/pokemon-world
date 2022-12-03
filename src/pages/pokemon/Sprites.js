@@ -3,7 +3,7 @@ import styles from "./styles/PokemonDetail.module.css";
 
 export default function Sprites({ sprites }) {
   return (
-    <div className="flex gap">
+    <div className={`${styles["sprites"]} gap`}>
       <div className={`${styles["sprite"]}`}>
         <img src={sprites.front_default} alt="front of pokemon" />
       </div>

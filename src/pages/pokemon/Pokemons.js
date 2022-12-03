@@ -31,9 +31,9 @@ export default function Pokemons() {
   if (status === "error") return toast.error("Error fetching pokemons... " + error);
 
   return (
-    <section className="container">
+    <section className="container flow" style={{ "--flow-gap": "4rem" }}>
       <div className={`${styles["controls"]}`}>
-        <div className="flow">
+        <div className="flow" style={{ "--flow-gap": "1rem" }}>
           <div className="flow-horizontal">
             <label className={`${styles["controls-label"]}`} htmlFor="randomPokemon">
               Get Random Pokemon:
@@ -46,12 +46,10 @@ export default function Pokemons() {
               }}
             />
           </div>
-          <div className="flow-horizontal">
-            <label className={`${styles["controls-label"]}`} htmlFor="pokemon">
-              Search By Name:
-            </label>
+          <div>
             <Input
               id="pokemon"
+              placeholder="Search by name"
               onKeyUpHandler={(e) => {
                 setPokemonSearch(e.target.value.toLowerCase());
               }}
@@ -60,7 +58,7 @@ export default function Pokemons() {
         </div>
         <div style={{ position: "relative" }} className={styles["controls-pokemon"]}>
           {searchValue != null ? (
-            <Link className="text-decoration-none" to={`/pokemon/${pokemonQuery.data?.name}`}>
+            <Link className="text-decoration-none w-100" to={`/pokemon/${pokemonQuery.data?.name}`}>
               <PokemonCard status={pokemonQuery.status} error={pokemonQuery.error} pokemon={pokemonQuery.data} />
             </Link>
           ) : (
@@ -68,15 +66,17 @@ export default function Pokemons() {
           )}
         </div>
       </div>
-      <List data={data} setEndpoint={setEndpoint}>
-        {data.results.map((pokemon, i) => {
-          return (
-            <Link key={i} to={`/pokemon/${pokemon.name}`}>
-              <PokemonCard pokemon={pokemon} />
-            </Link>
-          );
-        })}
-      </List>
+      <div>
+        <List data={data} setEndpoint={setEndpoint}>
+          {data.results.map((pokemon, i) => {
+            return (
+              <Link className="w-100" key={i} to={`/pokemon/${pokemon.name}`}>
+                <PokemonCard pokemon={pokemon} />
+              </Link>
+            );
+          })}
+        </List>
+      </div>
     </section>
   );
 }

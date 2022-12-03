@@ -5,7 +5,6 @@ import styles from "./styles/List.module.css";
 export default function List({ data, setEndpoint, children }) {
   return (
     <>
-      <div className={`${styles["items-container"]}`}>{children}</div>
       <div className={`${styles["buttons"]} flow-horizontal`}>
         <Button
           text={"Previous Page"}
@@ -16,7 +15,6 @@ export default function List({ data, setEndpoint, children }) {
             setEndpoint(data.previous);
           }}
         />
-
         <Button
           text={"Next Page"}
           type="accent"
@@ -27,6 +25,7 @@ export default function List({ data, setEndpoint, children }) {
           }}
         />
       </div>
+      <div className={`${styles["items-container"]}`}>{children}</div>
     </>
   );
 }

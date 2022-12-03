@@ -16,3 +16,15 @@
   height: auto;  
 }
 
+
+
+@media (max-width: 768px) {  
+  .container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .icons-cred {
+    font-size: 0.6rem;
+  }
+}
