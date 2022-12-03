@@ -19,7 +19,7 @@ function App() {
           <Route
             path="/pokemon"
             element={
-              <Suspense fallback={<Spinner center={true} />}>
+              <Suspense fallback={<Spinner center />}>
                 <Pokemons />
               </Suspense>
             }
@@ -27,7 +27,7 @@ function App() {
           <Route
             path="/pokemon/:id"
             element={
-              <Suspense fallback={<Spinner center={true} />}>
+              <Suspense fallback={<Spinner center />}>
                 <PokemonDetail />
               </Suspense>
             }
@@ -35,7 +35,7 @@ function App() {
           <Route
             path="/game"
             element={
-              <Suspense fallback={<Spinner center={true} />}>
+              <Suspense fallback={<Spinner center />}>
                 <Games />
               </Suspense>
             }
@@ -43,7 +43,7 @@ function App() {
           <Route
             path="/item"
             element={
-              <Suspense fallback={<Spinner center={true} />}>
+              <Suspense fallback={<Spinner center />}>
                 <Items />
               </Suspense>
             }

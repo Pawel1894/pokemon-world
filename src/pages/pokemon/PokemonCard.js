@@ -13,7 +13,7 @@ export default function PokemonCard({ pokemon, status, error }) {
         className={`${styles["pokemon-card"]}`}
       >
         {" "}
-        <Spinner center={true} />{" "}
+        <Spinner center />{" "}
       </div>
     );
 
@@ -36,11 +36,7 @@ export default function PokemonCard({ pokemon, status, error }) {
       }}
       className={`${styles["pokemon-card"]}`}
     >
-      <img
-        className={`${styles["pokemon-img"]}`}
-        src={pokemon?.sprites["front_default"]}
-        alt=""
-      />
+      <img className={`${styles["pokemon-img"]}`} src={pokemon?.sprites["front_default"]} alt="" />
       <h2 className="text-capitalize">{pokemon?.name}</h2>
       <div className={`${styles["pokemon-types"]}`}>
         {pokemon?.types.map((type, i) => (
