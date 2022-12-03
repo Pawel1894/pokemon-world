@@ -8,7 +8,7 @@ export default function Ability({ ability }) {
 
   const effect = useMemo(() => {
     if (!data) return;
-    return data.effect_entries.find((effect) => effect.language.name === "en")?.short_effect;
+    return data.effect_entries.find((item) => item.language.name === "en")?.short_effect;
   }, [data]);
 
   return (

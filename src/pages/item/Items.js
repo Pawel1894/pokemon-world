@@ -9,9 +9,9 @@ export default function Items() {
   const [endpoint, setEndpoint] = useState("https://pokeapi.co/api/v2/item?offset=0&limit=5");
   const { status, data, error } = useItems(endpoint);
 
-  if (status === "loading") return <Spinner center={true} />;
+  if (status === "loading") return <Spinner center />;
 
-  if (status === "error") return toast.error("Error fetching items... " + error);
+  if (status === "error") return toast.error(`Error fetching items... ${error}`);
 
   return (
     <section className="container">

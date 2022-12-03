@@ -7,9 +7,9 @@ import Game from "./GameCard";
 export default function Games() {
   const { data, status, error } = useGenerations();
 
-  if (status === "loading") return <Spinner center={true} />;
+  if (status === "loading") return <Spinner center />;
 
-  if (status === "error") return toast.error("Error fetching pokemons... " + error);
+  if (status === "error") return toast.error(`Error fetching games... ${error}`);
 
   return (
     <section className="container" style={{ "--max-width": "80rem" }}>

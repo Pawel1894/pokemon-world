@@ -1,24 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
+async function fetchGenerationDetails(url) {
+  const { data } = await axios.get(url);
+  return data;
+}
+
 export function useGenerations() {
   return useQuery({
     queryKey: ["generation"],
     queryFn: async () => {
       const { data } = await axios.get("https://pokeapi.co/api/v2/generation/");
-      let result = [];
+      const result = [];
 
       for (const gen of data.results) {
-        const response = await fetchGenerationDetails(gen.url);
-        result.push(response);
+        result.push(fetchGenerationDetails(gen.url));
       }
 
-      return result;
+      return await Promise.all(result);
     },
   });
-}
-
-async function fetchGenerationDetails(url) {
-  const { data } = await axios.get(url);
-  return data;
 }

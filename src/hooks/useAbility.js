@@ -8,6 +8,6 @@ export function useAbility(endpoint) {
       const { data } = await axios.get(endpoint);
       return data;
     },
-    enabled: !!endpoint,
+    enabled: Boolean(endpoint),
   });
 }

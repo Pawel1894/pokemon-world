@@ -1,23 +1,9 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
-export function usePokemon(searchValue) {
-  const queryClient = useQueryClient();
-
-  return useQuery({
-    queryKey: ["pokemons", searchValue],
-    queryFn: async () => {
-      if (typeof searchValue === "number") return fetchByOffset(searchValue);
-
-      return fetchByName(searchValue);
-    },
-    initialData: () => {
-      if (typeof searchValue === "string") {
-        return queryClient.getQueryData(["pokemons"])?.results?.find((p) => p.name === searchValue);
-      }
-    },
-    enabled: !!searchValue,
-  });
+async function fetchPokemonDetails(url) {
+  const { data } = await axios.get(url);
+  return data;
 }
 
 async function fetchByName(searchValue) {
@@ -29,10 +15,24 @@ async function fetchByName(searchValue) {
 async function fetchByOffset(searchValue) {
   const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1&offset=${searchValue}`);
 
-  return await fetchPokemonDetails(data.results[0].url);
+  return fetchPokemonDetails(data.results[0].url);
 }
 
-async function fetchPokemonDetails(url) {
-  const { data } = await axios.get(url);
-  return data;
+export function usePokemon(searchValue) {
+  const queryClient = useQueryClient();
+
+  return useQuery({
+    queryKey: ["pokemons", searchValue],
+    queryFn: async () => {
+      if (typeof searchValue === "number") return await fetchByOffset(searchValue);
+
+      return fetchByName(searchValue);
+    },
+    initialData: () => {
+      if (typeof searchValue === "string") {
+        return queryClient.getQueryData(["pokemons"])?.results?.find((p) => p.name === searchValue);
+      }
+    },
+    enabled: Boolean(searchValue),
+  });
 }

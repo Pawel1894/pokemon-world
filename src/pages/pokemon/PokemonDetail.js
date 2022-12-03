@@ -12,9 +12,9 @@ export default function PokemonDetail() {
   const location = useLocation();
   const { status, data, error } = usePokemon(location.pathname.split("/")[2]);
 
-  if (status === "loading") return <Spinner center={true} />;
+  if (status === "loading") return <Spinner center />;
 
-  if (status === "error") return toast.error("Error fetching pokemons... " + error);
+  if (status === "error") return toast.error(`Error fetching pokemon... ${error}`);
 
   return (
     <section className="container flow padding-inline-2" style={{ "--flow-gap": "2.5rem" }}>

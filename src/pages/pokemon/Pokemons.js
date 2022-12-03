@@ -26,9 +26,9 @@ export default function Pokemons() {
     return () => clearTimeout(searchTimeout);
   }, [pokemonSearch]);
 
-  if (status === "loading") return <Spinner center={true} />;
+  if (status === "loading") return <Spinner center />;
 
-  if (status === "error") return toast.error("Error fetching pokemons... " + error);
+  if (status === "error") return toast.error(`Error fetching pokemons... ${error}`);
 
   return (
     <section className="container flow" style={{ "--flow-gap": "4rem" }}>
@@ -41,7 +41,7 @@ export default function Pokemons() {
             <Random
               id="randomPokemon"
               onCLickHandler={() => {
-                let id = Math.ceil(Math.random() * data.count - 1);
+                const id = Math.ceil(Math.random() * data.count - 1);
                 setSearchValue(id);
               }}
             />

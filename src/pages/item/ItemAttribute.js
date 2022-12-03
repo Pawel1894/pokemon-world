@@ -7,7 +7,7 @@ export default function ItemAttribute({ endpoint }) {
 
   if (status === "loading") return <span>Loading...</span>;
 
-  if (status === "error") return toast.error("Error fetching attribute... " + error);
+  if (status === "error") return toast.error(`Error fetching attribute... ${error}`);
 
-  return data.descriptions.map((data, i) => <li key={i}>{data.description}</li>);
+  return data.descriptions.map((item, i) => <li key={i}>{item.description}</li>);
 }
