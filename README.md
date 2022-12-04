@@ -17,7 +17,7 @@ This is a simple pokemon encyclopedia like site, created with help of [PokeAPI](
 
 My goal for creating this app was to learn and test [TanStack Query](https://tanstack.com/query/v4) library in action.
 
-### Links
+### Website
 
 [App live demo](https://react-poke-world.netlify.app)
 
