@@ -12,8 +12,7 @@ Install NodeJs
   - [Motivation](#motivation)
   - [Website](#website)
   - [Preview](#preview)
-- [My process](#my-process)
-  - [Built with](#built-with)  
+- [Built with](#built-with)  
 - [Install process](#install-process)
 - [Build process](#build-process)
   
@@ -34,9 +33,7 @@ My goal for creating this app was to learn and test [TanStack Query](https://tan
 ![obraz](https://user-images.githubusercontent.com/45789222/205501861-100b25ca-ea7d-4078-85e6-295c5f54dac0.png)
 
 
-## My Process
-
-### Built with
+## Built with
 
  - [CRA (Create react app)](https://create-react-app.dev/)
  - [React](https://reactjs.org/)
