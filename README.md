@@ -46,7 +46,7 @@ My goal for creating this app was to learn and test [TanStack Query](https://tan
 ## Install process
 
 1. install [nodejs](https://nodejs.org/en/download/)
-2. open project folder in Command Line
+2. navigate project folder in Command Line
 3. run `npm install` script
 4. run `npm start` script
 
