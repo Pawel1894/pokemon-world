@@ -2,6 +2,10 @@
 
 This is a simple pokemon encyclopedia like site, created with help of [PokeAPI](https://pokeapi.co/) and [React](https://reactjs.org/).
 
+## How to install locally
+
+Install NodeJs
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -10,6 +14,8 @@ This is a simple pokemon encyclopedia like site, created with help of [PokeAPI](
   - [Preview](#preview)
 - [My process](#my-process)
   - [Built with](#built-with)  
+- [Install process](#install-process)
+- [Build process](#build-process)
   
 ## Overview
   
@@ -38,3 +44,17 @@ My goal for creating this app was to learn and test [TanStack Query](https://tan
  - [React Toastify](https://fkhadra.github.io/react-toastify/introduction/)
  - [React Router](https://reactrouter.com/en/main)
  - [Tanstack query](https://tanstack.com/query/v4)
+
+
+## Install process
+
+1. install [nodejs](https://nodejs.org/en/download/)
+2. open project folder in Command Line
+3. use `npm install` script
+4. use `npm start` script
+
+
+## Build process
+
+1. open project folder in Command Line
+2. run `npm run build` script
