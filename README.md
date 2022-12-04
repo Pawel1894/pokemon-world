@@ -23,7 +23,6 @@ My goal for creating this app was to learn and test [TanStack Query](https://tan
 
 ### Preview
 
-![obraz](https://user-images.githubusercontent.com/45789222/205501397-a60b896b-b36b-4341-bda2-c1fb49845e4d.png)
 ![obraz](https://user-images.githubusercontent.com/45789222/205501800-2de7a3da-010f-47a2-a65e-9fead8e02436.png)
 ![obraz](https://user-images.githubusercontent.com/45789222/205501826-377719f3-293b-478d-943d-c2e87a5a9538.png)
 ![obraz](https://user-images.githubusercontent.com/45789222/205501861-100b25ca-ea7d-4078-85e6-295c5f54dac0.png)
