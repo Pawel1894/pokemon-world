@@ -2,10 +2,6 @@
 
 This is a simple pokemon encyclopedia like site, created with help of [PokeAPI](https://pokeapi.co/) and [React](https://reactjs.org/).
 
-## How to install locally
-
-Install NodeJs
-
 ## Table of contents
 
 - [Overview](#overview)
