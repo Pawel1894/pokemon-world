@@ -2,21 +2,22 @@
   display: grid;
   justify-content: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, 350px);
+  margin-inline: auto;
   width: 100%;
-  max-width:120rem;
-  gap: 1rem;  
+  max-width: 120rem;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .items-container {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, var(--default-width, 250px));
   }
-  
-  @media (max-width: 768px) {
-    .items-container {
-      gap: 0.5rem;
-      grid-template-columns: repeat(auto-fit, var(--default-width, 250px));
-    }
-  }
-  
-  .buttons {
-    margin-inline:auto;
-    width: max-content;
-    margin-bottom: 1.5rem;
-  }
+}
+
+.buttons {
+  margin-inline: auto;
+  width: max-content;
+  margin-bottom: 1.5rem;
+}
